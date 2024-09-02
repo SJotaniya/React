@@ -26,10 +26,10 @@ export default function Footer() {
         <div class="footer-section social">
           <h2>Follow Us</h2>
           <div class="social-icons">
-            <a href="#"> <i class="fab fa-facebook-f"></i>  </a>
-            <a href="#"> <i class="fab fa-twitter"></i> </a>
-            <a href="#"> <i class="fab fa-instagram"></i> </a>
-            <a href="#"> <i class="fab fa-linkedin-in"></i> </a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
       </div>

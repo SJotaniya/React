@@ -1,19 +1,16 @@
 import React from 'react'
 
 export default function Index(name) {
-  let arr1 = [1,2,3]
-  let arr2 = [4,5,6]
-  let arr3 = [...arr1,...arr2]
-  
+  const [count, setcount] = useState(0);
+    const add = () => {
+      setcount(count + 1)
+    }
+    
   return (
     <div>
-      {
-        arr3.map((e,i)=>{
-          return <div>
-            <p>{e}</p>
-          </div>
-        })
-      }
+      <h1 className='txt1'>Funcational Compenent</h1>
+      <h1>{count}</h1>
+      <button onClick={add}>Increase The Number</button>
     </div>
   )
 }
