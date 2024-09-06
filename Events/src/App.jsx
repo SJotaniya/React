@@ -14,7 +14,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Validate and submit the form, e.g., send data to an API
     setSubmitted(true);
   };
 
@@ -30,32 +29,24 @@ function App() {
       
       {!submitted ? (
         <form className="competition-form" onSubmit={handleSubmit}>
+
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required/>
           </div>
+
           <div className="form-group">
             <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
+            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required/>
           </div>
+
           <div className="form-group">
             <label htmlFor="feedback">Feedback:</label>
-            <textarea
-              id="feedback"
-              name="feedback"
-              value={formData.feedback}
-              onChange={handleChange}
-              required
-            />
+            <textarea id="feedback" name="feedback" value={formData.feedback} onChange={handleChange} required/>
           </div>
+
           <button type="submit" className="submit-button">Submit</button>
+
         </form>
       ) : (
         <div className="success-message">Thank you for your submission!</div>
