@@ -1,0 +1,77 @@
+/* Main container styling */
+.app-container {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #ff9800;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #e68a00;
+}
+
+/* Form styling */
+.competition-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input and Textarea styling */
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #28a745;
+}
+
+/* Submit button styling */
+.submit-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+
+/* Success message styling */
+.success-message {
+  font-size: 1.5em;
+  color: #28a745;
+  text-align: center;
+}
