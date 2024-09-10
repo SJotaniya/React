@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+export default function App() {
 
   const [formData, setFormData] = useState({ name: '', email: '', feedback: '' });
   const [submitted, setSubmitted] = useState(false);
@@ -54,4 +54,3 @@ function App() {
     </div>
   );
 }
-export default App
