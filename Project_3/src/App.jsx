@@ -2,12 +2,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 function App() {
-
+  
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const [error, setError] = useState({});
 
   const nameRef = useRef(null);
   const emailRef = useRef(null);
@@ -48,6 +46,7 @@ function App() {
       setError(errors);
     }
   };
+
   return (
     <div class="container">
         <div class="form-wrapper">

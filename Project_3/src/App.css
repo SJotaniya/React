@@ -1,4 +1,3 @@
-/* styles.css */
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(135deg, #f2f2f2, #e1e8f0);
@@ -33,6 +32,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
   background: linear-gradient(135deg, #3498db, #2ecc71);
+  background-clip: initial;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient-text 3s ease infinite;
