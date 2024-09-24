@@ -1,7 +1,9 @@
 import React from 'react';
-import './FormVAlid.css';
+import './FormValid.css';
 
 export default function FormValid() {
+  
+
   return (
     <div class="form-container">
       <h2>Register Now</h2>
