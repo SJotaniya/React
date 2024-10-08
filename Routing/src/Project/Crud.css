@@ -1,0 +1,166 @@
+.create-container, .delete-container, .home-container, .update-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.create-container:hover, .delete-container:hover, .home-container:hover, .update-container:hover {
+  transform: translateY(-10px);
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: 'Arial', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.input-field {
+  width: 85%;
+  padding: 12px 15px;
+  margin: 12px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.input-field:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.5);
+  outline: none;
+}
+
+.submit-button, .back-button, .delete-button, .edit-button, .update-button {
+  padding: 12px 25px;
+  margin: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.submit-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+.edit-button, .update-button {
+  background-color: #2196F3;
+  color: white;
+}
+
+.edit-button:hover, .update-button:hover {
+  background-color: #1976D2;
+  transform: scale(1.05);
+}
+
+.back-button {
+  background-color: #757575;
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #616161;
+  transform: scale(1.05);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2196F3;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #2196F3;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #1976D2;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.styled-table th, .styled-table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.styled-table tr {
+  background-color: #ffffff;
+}
+
+.styled-table tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tr:hover {
+  transform: translateY(-5px);
+}
