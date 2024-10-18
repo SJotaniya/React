@@ -1,8 +1,10 @@
-import {configureStore} from "@reduxjs/toolkit"
-import Task from "../Features/Slice"
+import { configureStore } from '@reduxjs/toolkit';
+import taskReducer from '../features/Slice';
 
-export const store = configureStore({
-  reducer:{
-    
-  }
-})
+const store = configureStore({
+  reducer: {
+    tasks: taskReducer,
+  },
+});
+
+export default store;
