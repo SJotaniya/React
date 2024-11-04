@@ -30,13 +30,13 @@ export default function MoneyManager() {
       <h1 className="appTitle">Money Manager</h1>
 
       <div className="incomeSection">
-        <input type="number" className="inputField incomeInput" placeholder="Enter Income" value={income} onChange={(e) => setIncome(e.target.value)} />
+        <input type="number" className="inputField incomeInput" placeholder="Income" value={income} onChange={(e) => setIncome(e.target.value)} />
         <button className="actionButton addIncomeBtn" onClick={handleAmount}>Add Income</button>
         <p className="budgetDisplay">Your Budget: {incomeAmt}</p>
       </div>
       <div className="expenseSection">
-        <input type="number" className="inputField expenseInput" placeholder="Enter Expense" value={expense} onChange={(e) => setExpense(e.target.value)} />
-        <input type="text" className="inputField descriptionInput" placeholder="Enter Description" value={description} onChange={(e) => setDescription(e.target.value)} />
+        <input type="number" className="inputField expenseInput" placeholder="Expense Amount" value={expense} onChange={(e) => setExpense(e.target.value)} />
+        <input type="text" className="inputField descriptionInput" placeholder="Expense Description" value={description} onChange={(e) => setDescription(e.target.value)} />
         <button className="actionButton addExpenseBtn" onClick={handleExpense}>Add Expense</button>
       </div>
       <div className="expenseListContainer">
