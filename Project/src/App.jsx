@@ -1,14 +1,19 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import MoneyManager from './redux/MoneyManager';
-import { store } from './app/store';
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import SignUp from './Firebase/SignUp'
+import SignIn from './Firebase/SignIn'
+import Dashboard from './Firebase/Dashboard';
 
 export default function App() {
   return (
-    <div>
-      <Provider store={store}>
-        <MoneyManager />
-      </Provider>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<SignUp/>}></Route>
+          <Route path='/signin' element={<SignIn/>}></Route>
+          <Route path='/dashboard' element={<Dashboard/>}></Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }

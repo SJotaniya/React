@@ -1,231 +1,154 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
   margin: 0;
   padding: 0;
-  background: url(../public/image.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
   display: flex;
   justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
-.moneyManagerContainer {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
-  max-width: 500px;
-  width: 90%;
-  color: #fff;
+.dashboard {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
   text-align: center;
-  animation: fadeInAndScale 1s ease-in-out;
 }
 
-.appTitle {
-  font-size: 40px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #fff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  animation: pulse 1.5s infinite;
+.dashboard-title {
+  font-size: 25px;
+  color: #333;
 }
 
-input[type="number"], input[type="text"] {
-  background: rgba(0, 0, 0, 0.5);
-  border: none;
-  border-radius: 10px;
-  padding: 12px 20px;
-  color: #ffffff;
-  font-size: 16px;
-  width: 90%;
-  margin-bottom: 15px;
-  box-shadow: 0 0 15px rgba(48, 255, 255, 0.7), inset 0 0 5px rgba(48, 255, 255, 0.5);
-  transition: all 0.3s ease-in-out;
-}
-
-input[type="number"]:focus, input[type="text"]:focus {
-  outline: none;
-  box-shadow: 0 0 25px rgba(48, 255, 255, 1), inset 0 0 10px rgba(48, 255, 255, 0.8);
-}
-
-.incomeAmount, .expenseAmount {
-  background: rgba(0, 0, 0, 0.8);
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 20px rgba(48, 255, 255, 0.5), inset 0 0 5px rgba(255, 255, 255, 0.1);
-}
-
-.actionButton {
-  background-color: rgb(48, 255, 255);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 10px 0;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s, background-color 0.4s, box-shadow 0.4s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.actionButton::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(48, 255, 255, 0.4));
-  z-index: -1;
-  transition: all 0.4s ease;
-  transform: rotate(45deg);
-}
-
-.actionButton:hover::before {
-  top: -30%;
-  left: -30%;
-  width: 160%;
-  height: 160%;
-}
-
-.actionButton:hover {
-  background-color: rgb(38, 205, 205);
-  transform: scale(1.1);
-  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.6);
-}
-
-.actionButton:active {
-  transform: scale(0.95);
-}
-
-.addIncomeBtn {
-  background-color: rgb(48, 255, 255);
-}
-
-.addExpenseBtn {
-  background-color: rgb(48, 255, 255);
-}
-
-.budgetDisplay {
-  font-size: 22px;
-  color: #fff;
+.dashboard-table {
+  width: 100%;
+  border-collapse: collapse;
   margin-top: 20px;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
-.expenseSection {
-  margin-top: 30px;
+.dashboard-table-header {
+  background-color: #007bff;
+  color: #ffffff;
 }
 
-.expenseListContainer {
-  margin-top: 40px;
+.dashboard-table-row {
+  background-color: #f1f1f1;
+}
+
+.dashboard-table-cell {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* SignIn */
+.signin {
+  width: 80%;
+  max-width: 400px;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeInUpAndZoom 1.2s ease-in-out;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 40px;
 }
 
-.expenseItem {
-  background: rgba(255, 255, 255, 0.1);
-  border-left: 5px solid #ff4e50;
-  padding: 15px;
-  border-radius: 10px;
-  margin: 15px 0;
-  text-align: left;
-  transform: scale(0.9);
-  transition: transform 0.3s;
+.signin-title {
+  font-size: 25px;
+  color: #007bff;
 }
 
-.expenseItem:hover {
-  transform: scale(1.05) rotate(2deg);
+.signin-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.expenseAmount,
-.expenseDescription {
-  font-size: 18px;
-  color: #fff;
-  margin: 5px 0;
-  animation: fadeText 0.6s ease-in-out;
+.signin-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
-@keyframes fadeInAndScale {
-  from {
-    opacity: 0;
-    transform: scale(0.8) rotate(2deg);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
+.signin-button:hover {
+  background-color: #0056b3;
 }
 
-@keyframes pulse {
-  0%, 100% {
-    transform: scale(1);
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  }
-  50% {
-    transform: scale(1.05);
-    text-shadow: 0 0 20px rgba(255, 255, 255, 1);
-  }
+.signin-text {
+  margin-top: 15px;
+  color: #555;
 }
 
-@keyframes inputFocusAnimation {
-  0% {
-    transform: scale(1);
-    border-color: rgba(255, 255, 255, 0.3);
-  }
-  50% {
-    transform: scale(1.05);
-    border-color: rgba(255, 255, 255, 0.8);
-  }
-  100% {
-    transform: scale(1);
-    border-color: #00d4ff;
-  }
+.signin-link {
+  color: #007bff;
+  cursor: pointer;
 }
 
-@keyframes bounceIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  50% {
-    opacity: 0.6;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.signin-link:hover {
+  color: #0056b3;
 }
 
-@keyframes fadeInUpAndZoom {
-  from {
-    opacity: 0;
-    transform: translateY(50px) scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
+.signup {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 40px;
 }
 
-@keyframes fadeText {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.signup-title {
+  font-size: 25px;
+  color: #007bff;
+}
+
+.signup-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+.signup-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.signup-link {
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-link:hover {
+  color: #0056b3;
 }
