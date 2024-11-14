@@ -20,7 +20,7 @@ export default function Dashboard() {
     if (user) {
       fetchUser();
     }
-  }, []);
+  }, [user]);
 
   const fetchUser = () => {
     getDoc(doc(db, 'users', user.uid)).then((data) => {
@@ -32,28 +32,26 @@ export default function Dashboard() {
   return (
     <div className="dashboard">
       <p className="dashboard-title">Login Details</p>
-      <div>
       {userData && (
-        <table border={1} className="dashboard-table">
+        <table className="dashboard-table">
           <thead className="dashboard-table-header">
             <tr className="dashboard-table-row">
               <th className="dashboard-table-cell">Name</th>
               <th className="dashboard-table-cell">Email</th>
               <th className="dashboard-table-cell">Hobby</th>
               <th className="dashboard-table-cell">City</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="dashboard-table-row">
-                <td className="dashboard-table-cell">{userData.name}</td>
-                <td className="dashboard-table-cell">{userData.email}</td>
-                <td className="dashboard-table-cell">{userData.hobby}</td>
-                <td className="dashboard-table-cell">{userData.city}</td>
-              </tr>
-            </tbody>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="dashboard-table-row">
+              <td className="dashboard-table-cell">{userData.name}</td>
+              <td className="dashboard-table-cell">{userData.email}</td>
+              <td className="dashboard-table-cell">{userData.hobby}</td>
+              <td className="dashboard-table-cell">{userData.city}</td>
+            </tr>
+          </tbody>
           </table>
         )}
-      </div>
     </div>
   );
 }
