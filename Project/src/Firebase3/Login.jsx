@@ -1,10 +1,10 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
-import { auth, loginPR } from '../../firebaseConfig';
+import { auth, loginPR, googleProvider   } from '../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
+import { signInWithPopup } from 'firebase/auth';
 import { doc, setDoc } from 'firebase/firestore';
 import './styles.css';
-
 
 export default function Login() {
   const [name, setName] = useState("");
@@ -15,7 +15,7 @@ export default function Login() {
 
   const handleSubmit = () => {
     if (!name || !email || !password) {
-      setError("*Please fill all fields.");
+      alert("*Please fill all fields.");
       return;
     }
     createUserWithEmailAndPassword(auth, email, password)
@@ -25,6 +25,19 @@ export default function Login() {
     navigate("/dashboard");
   };
 
+  const handleGoogleSignIn = async () => {
+    const result = await signInWithPopup(auth, googleProvider);
+    const user = result.user;
+
+    await setDoc(doc(loginPR, 'users', user.email), {
+      email: user.email,
+      displayName: user.displayName,
+    });
+
+    alert(`Welcome, ${user.displayName}!`);
+    navigate('/dashboard');
+  };
+
   return (
     <div className="signin">
       <p className="signin-title">Sign In</p>
@@ -32,6 +45,9 @@ export default function Login() {
       <input type="text" placeholder="Enter Email Here" onChange={(e) => setEmail(e.target.value)} className="signin-input"/>
       <input type="password" placeholder="Enter Your Password" onChange={(e) => setPassword(e.target.value)} className="signin-input"/>
       <button onClick={handleSubmit} className="signin-button">Login</button>
+      <p className="google-signin" onClick={handleGoogleSignIn}>
+        Sign In with Google
+      </p>
     </div>
   )
 }
