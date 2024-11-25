@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Lora:wght@400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(120deg, #ff9a8b, #fecfef, #f3c0f7);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.dashboard {
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  padding: 40px;
+  background: linear-gradient(135deg, #ff9a8b, #fecfef);
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hello {
+  font-size: 26px;
+  font-weight: 700;
+  color: whitesmoke;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  animation: slideIn 0.8s ease;
+  font-family: 'Lora', serif;
+}
+
+.name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #5f1010;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  animation: slideIn 0.8s ease;
+  font-family: 'Lora', serif;
+}
+
+.greet {
+  font-size: 18px;
+  color: #ffffff;
+  background: #ff6f61;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+  text-transform: uppercase;
+  animation: buttonPulse 1.5s infinite ease-in-out;
+  transition: transform 0.3s ease, background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.greet:hover {
+  background: #d9554f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.signin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
+  background: linear-gradient(135deg, #ff9a8b, #fecfef);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease;
+}
+
+.signin-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+.signin-input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.signin-input:focus {
+  background: #ffe2e2;
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 111, 97, 0.8);
+}
+
+.signin-button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #ff6f61;
+  color: #ffffff;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: buttonPulse 1.5s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+
+.signin-button:hover {
+  background: #d9554f;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes buttonPulse {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(1.05);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}

@@ -11,7 +11,7 @@ export default function Dashboard() {
     let subscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         setUser(currentUser);
-        console.log(currentUser);
+        // console.log(currentUser);
       }
     });
   }, []);
@@ -24,7 +24,7 @@ export default function Dashboard() {
 
   const fetchUser = () => {
     getDoc(doc(db, 'users', user.uid)).then((data) => {
-      console.log(data.data());
+      // console.log(data.data());
       setUserData(data.data());
     });
   };

@@ -1,6 +1,6 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react';
-import { auth, db } from '../../firebaseConfig';
+import { auth, loginPR } from '../../firebaseConfig';
 import { useNavigate } from 'react-router-dom';
 import { doc, setDoc } from 'firebase/firestore';
 
@@ -21,7 +21,7 @@ export default function SignUp() {
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then(data => {
-        setDoc(doc(db, "users", data.user.uid), { name, email, city, hobby });
+        setDoc(doc(loginPR, "users", data.user.uid), { name, email, city, hobby });
       });
     navigate("/dashboard");
   };
