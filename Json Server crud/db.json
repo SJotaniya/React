@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "3",
+      "title": "another title",
+      "views": 200
+    },
+    {
+      "id": "4",
+      "title": "another title 4",
+      "views": "400"
+    }
+  ]
+}
